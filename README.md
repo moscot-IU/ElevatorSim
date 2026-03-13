@@ -1,3 +1,3 @@
 # ElevatorSim
 #This is the readme for our elevator simulator project - 
-Contributors - Morton Scott, Nickolaus Macy,
+Contributors - Morton Scott, Nickolaus Macy, Kendall Ferguson, 
