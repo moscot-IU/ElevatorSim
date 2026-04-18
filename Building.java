@@ -1,3 +1,6 @@
+//ElevatorSim - Class by Morton Scott - 4/17/26 
+//This class is deisgned to be the building object that contains our elevator object that traverses the floors of this building
+
 public class Building {
 
     private int totalFloors;
