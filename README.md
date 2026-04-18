@@ -5,4 +5,5 @@ Contributors - Morton Scott, Nickolaus Macy, Kendall Ferguson, Madilynn Foley
 Class List:
 Elevator - Nickolaus Macy
 Building - Morton Scott
-ElevatorControl - 
+ElevatorControl - Kendall Ferguson
+Request - Madilynn Foley
