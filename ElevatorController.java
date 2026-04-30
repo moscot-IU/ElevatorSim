@@ -1,5 +1,3 @@
-package Elevator;
-
 /**
  * Team Name: G1
  * Contributing Team Member: Kendall Ferguson
