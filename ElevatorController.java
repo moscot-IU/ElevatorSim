@@ -1,41 +1,34 @@
 package Elevator;
 
-//Elevator Project, Kendall Ferguson, 4/16/2026, This is the code for the Control to the elevators.
-//This will make the elevators move up and down when someone makes a request.
+/**
+ * Team Name: G1
+ * Contributing Team Member: Kendall Ferguson
+ */
 
-import java.util.LinkedList;
-import java.util.Queue;
+package elevatorSim;
+import javax.swing.Timer;
 
 public class ElevatorController {
-	
-private Elevator elevator;
-private Queue<Integer>requests;
+    private Elevator elevator;
+    private Request gui;
+    private Timer timer;
 
-public ElevatorController(Elevator elevator) {
-	this.elevator = elevator;
-	requests = new LinkedList<>();
+    public ElevatorController(Elevator e, Request r) {
+        this.elevator = e;
+        this.gui = r;
+        
+        // 5 second delay between floors
+        this.timer = new Timer(5000, event -> {
+            if (elevator.hasWork()) {
+                gui.updateDisplay(elevator.move());
+            } else {
+                timer.stop();
+            }
+        });
+    }
+
+    public void handleFloorRequest(int floor) {
+        gui.updateDisplay(elevator.addStop(floor));
+        if (!timer.isRunning()) timer.start();
+    }
 }
-
-//Adds a floor requests
-public void addRequest(int floor) {
-	requests.add(floor);
-}
-
-//Runs the system
-public void run() {
-	while (!requests.isEmpty()) {
-		int target = requests.poll();
-		
-		while( elevator.getCurrentFloor() != target) {
-			if(elevator.getCurrentFloor() <target) {
-				elevator.moveUp();
-			} else {
-				elevator.moveDown();
-			}
-			}
-		}
-		
-		elevator.openDoor();
-	}
-}
-
