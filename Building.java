@@ -1,39 +1,17 @@
-//ElevatorSim - Class by Morton Scott - 4/17/26 
-//This class is deisgned to be the building object that contains our elevator object that traverses the floors of this building
+//ElevatorSim
+//This class is deisgned to hold the descriptions of the floors that the elevator traverses
+//Team Name: G1
+//Contributing Team Member: Morton Scott
+ 
+
+package elevatorSim;
 
 public class Building {
+    private final String[] descriptions = {
+        "Clothing", "Home Goods", "Electronics", "Sporting Goods", "Skyview Restaurant"
+    };
 
-    private int totalFloors;
-    private Elevator elevator;
-
-    // Constructor
-    public Building(int totalFloors) {
-        this.totalFloors = totalFloors;
-        this.elevator = new Elevator(1, 1);
-    }
-
-    // Constructor
-    public Building(int totalFloors, Elevator elevator) {
-        this.totalFloors = totalFloors;
-        this.elevator = elevator;
-    }
-
-    // Getters - 
-    // Returns number of total floors
-    public int getTotalFloors() { return totalFloors; }
-
-    //Gets Elevators objects in formation
-    public Elevator getElevator() { return elevator; }
-
-
-    // Setters
-    // Set total number of floors in the building
-    public void setTotalFloors(int totalFloors) {
-        this.totalFloors = totalFloors;
-    }
-
-    //sets which elevator object is in the building
-    public void setElevator(Elevator elevator) {
-        this.elevator = elevator;
+    public String getFloorDescription(int floor) {
+        return (floor >= 1 && floor <= 5) ? descriptions[floor-1] : "Unknown";
     }
 }
