@@ -1,7 +1,9 @@
 # ElevatorSim
 #This is the readme for our elevator simulator project - 
 Contributors - Morton Scott, Nickolaus Macy, Kendall Ferguson, Madilynn Foley
+
   Our project simulates an elevator system in a five-story building. Each floor represents a store front and the top floor being a restaurant. Our system is designed to process user requests, then functions to move the elevator between floors.  
+  
   Our goal is to model a realistic elevator system including directional movements and user driven requests, while using object-oriented programming skills. 
 This project has four main source files, each being responsible for a specific part of the operating system:
   1.	Building: Morton Scott
